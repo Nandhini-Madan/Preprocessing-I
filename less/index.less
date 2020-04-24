@@ -52,12 +52,20 @@ table {
 * {
     box-sizing: border-box;
 }
+//variables
 @theme-color:lightgrey;
-@default-pad:10px;
+
+@default-align:center;
+//mixins
 .default-font(){
 	font-size: large;
 	font-weight: bold;
 }
+.default-border(){
+padding: 10px;
+border-bottom: 1px dotted black;
+}
+
 html, body {
     height: 100%;
 }
@@ -69,35 +77,41 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+
+	@media(max-width:500px){
+		
+		flex-direction: column;
+		
+	}
+	
 	
 	a{
 	text-decoration: none;
-	padding:@default-pad;
+	padding:10px;
 	
 	}
+	
 }
 .top_section{
 	display: flex;
 	justify-content:left;
 	background-color:@theme-color;
-	padding:@default-pad;
+	padding:10px;
 
 	img{
-		padding: @default-pad;
+		padding: 10px;
 		width:50%;
 	}
 	.text_header_container{
-		padding: @default-pad;
+		padding: 10px;
 	
 		h1{
 		.default-font();
 		padding: 0;
-
 		}
 		h2{
 		font-size: x-large;
-		padding-bottom: 10px;
-		border-bottom: 1px dotted black;
+		default-border();
 		
 		}
 	}
@@ -105,8 +119,7 @@ html, body {
 	.second_top_container{
 		padding: 10px;
 		h3{
-			font-size: large;
-			font-weight: bold;
+			.default-font();
 			padding-bottom: 10px;
 		}
 		button{
@@ -124,8 +137,10 @@ html, body {
 		flex-direction: column;
 		width:50%;
 		h3{
-			font-size: large;
-			font-weight: bold;
+			.default-font();
+		}
+		p{
+			text-align: justify;
 		}
 		
 	}
@@ -134,22 +149,19 @@ html, body {
 	width: 100%;
 }
 	.border_text_container p{
-		border:1px solid black;
-		padding: 10px;
+		default-border();
 		
 		
 	}
 	h3{
-		font-size: large;
-		font-weight: bold;
-		padding: @default-pad;
+		.default-font();
+		padding: 10px;
 	}
 	.Work_table{
 		padding:20px;
 		h3{
-			font-size: larger;
-			font-weight: bold;
-			padding: 10px;
+			.default-font();
+			default-border();
 			
 		}
 	}
@@ -159,8 +171,7 @@ html, body {
 		border-collapse: collapse;
 		width: 100%;
 		th{
-			font-size: larger;
-			font-weight: bold;
+			.default-font();
 		}
 		
 	  }

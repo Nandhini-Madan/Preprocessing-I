@@ -210,9 +210,10 @@ h3 {
   padding: 20px;
 }
 .Work_table h3 {
-  font-size: larger;
+  font-size: large;
   font-weight: bold;
   padding: 10px;
+  border-bottom: 1px dotted black;
 }
 table {
   font-family: arial, sans-serif;
@@ -239,3 +240,5 @@ footer {
 footer h5 {
   text-align: center;
 }
+
+  
