@@ -52,8 +52,136 @@ table {
 * {
     box-sizing: border-box;
 }
-
+@theme-color:lightgrey;
+@default-pad:10px;
+.default-font(){
+	font-size: large;
+	font-weight: bold;
+}
 html, body {
     height: 100%;
 }
+.container{
+	padding: 10px;
+	margin: 1px;
+}
+.header_nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	
+	a{
+	text-decoration: none;
+	padding:@default-pad;
+	
+	}
+}
+.top_section{
+	display: flex;
+	justify-content:left;
+	background-color:@theme-color;
+	padding:@default-pad;
+
+	img{
+		padding: @default-pad;
+		width:50%;
+	}
+	.text_header_container{
+		padding: @default-pad;
+	
+		h1{
+		.default-font();
+		padding: 0;
+
+		}
+		h2{
+		font-size: x-large;
+		padding-bottom: 10px;
+		border-bottom: 1px dotted black;
+		
+		}
+	}
+}
+	.second_top_container{
+		padding: 10px;
+		h3{
+			font-size: large;
+			font-weight: bold;
+			padding-bottom: 10px;
+		}
+		button{
+		
+			padding: 10px;
+		}
+	}
+	
+	.second_section{
+		display: flex;
+		flex-direction: row;
+		
+	.text-container{
+		display: flex;
+		flex-direction: column;
+		width:50%;
+		h3{
+			font-size: large;
+			font-weight: bold;
+		}
+		
+	}
+}
+.border_text_container{
+	width: 100%;
+}
+	.border_text_container p{
+		border:1px solid black;
+		padding: 10px;
+		
+		
+	}
+	h3{
+		font-size: large;
+		font-weight: bold;
+		padding: @default-pad;
+	}
+	.Work_table{
+		padding:20px;
+		h3{
+			font-size: larger;
+			font-weight: bold;
+			padding: 10px;
+			
+		}
+	}
+	
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		th{
+			font-size: larger;
+			font-weight: bold;
+		}
+		
+	  }
+	  
+	  td, th {
+		border: 1px;
+		text-align: left;
+		padding: 8px;
+
+	  }
+	  
+	  tr:nth-child(even) {
+		background-color: @theme-color;
+	  }
+footer{
+	padding:50px;
+	background-color: @theme-color;
+	
+	h5{
+		text-align: center;
+	}
+}
+	
 
