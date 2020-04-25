@@ -138,12 +138,18 @@ body {
   padding: 10px;
   margin: 1px;
 }
-.header_nav {
+nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-.header_nav a {
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+nav a {
   text-decoration: none;
   padding: 10px;
 }
@@ -164,10 +170,11 @@ body {
   font-size: large;
   font-weight: bold;
   padding: 0;
+  font-family: 'Shadows Into Light', cursive;
 }
 .top_section .text_header_container h2 {
   font-size: x-large;
-  padding-bottom: 10px;
+  padding: 10px;
   border-bottom: 1px dotted black;
 }
 .second_top_container {
@@ -188,18 +195,21 @@ body {
 .second_section .text-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
 }
 .second_section .text-container h3 {
   font-size: large;
   font-weight: bold;
 }
+.second_section .text-container p {
+  text-align: justify;
+}
 .border_text_container {
   width: 100%;
 }
 .border_text_container p {
-  border: 1px solid black;
   padding: 10px;
+  border: 1px solid;
 }
 h3 {
   font-size: large;
@@ -221,7 +231,7 @@ table {
   width: 100%;
 }
 table th {
-  font-size: larger;
+  font-size: large;
   font-weight: bold;
 }
 td,
@@ -240,5 +250,3 @@ footer {
 footer h5 {
   text-align: center;
 }
-
-  
